@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+       body { background-image:linear-gradient(to right, rgb(64, 3, 88),rgb(85, 20, 204));
+               color:white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+            }
+        fieldset{
+        background-image:linear-gradient(to bottom, rgb(21, 9, 24),rgb(52, 47, 73) );
+        display: flex;
+        align-items:center;
+        box-shadow: 5px 5px 4px   rgba(137, 198, 216, 0.5);
+        padding:35px;
+        
+        }
+        legend{   
+            font-size:20px;
+            text-align: center;
+        }
+        main{ 
+              position: absolute;
+              top:49%;
+              left:50%;
+              transform: translate(-50%,-50%);
+               
+            }
+        input,textarea{
+                border-radius: 7px ;
+                border-top:none;
+                border-left:none; 
+                background:none;
+                color: #dddd ;
+                letter-spacing: 1px;
+             }
+                
+                
+        input:hover{
+             background-color: rgba(51, 99, 243, 0.062);
+        }
+        textarea:hover{            
+            background-color: rgba(51, 99, 243, 0.062);
+
+        }
+
+        
+           .submit{
+                     font-size: 16px;
+                    padding:7px;
+                    background-color:rgba(95, 165, 95, 0.514);
+                    color:rgb(7, 31, 1);
+                    width:100%;
+                    cursor: pointer;
+
+                  }
+            .submit:hover{
+              
+                color: rgb(63, 15, 15);
+                
+                background-color:rgba(95, 165, 95, 0.514);
+            }
+            .submit:active{
+                color:rgb(7, 31, 1);
+                background-color: brown;
+                border:none;
+               
+            }
+            #nasc{
+                background-color:white;
+                color:black;
+            }
+            label{ 
+                 font-size:16px;
+            }
+
+
+        
+
+
+    </style>
+
+</head>
+<body>
+      <main>
+             <fieldset>            
+            <legend>CADASTRO</legend>
+          <form action="redirecionamento.html" method="post">
+
+           <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+           </div>         
+             <br> 
+           <div>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" required>
+           </div>
+              <br>
+           <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+           </div>
+            <br>
+           <div>
+               <label for="nasc">Data de nascimento</label>
+               <input type="date" name="datanasc" id="nasc" required>
+           </div>
+
+            <p>Experiência</p>
+           <div>
+            <input type="radio" name="exper" id="junior" >
+            <label for="junior">Junior</label>
+
+            <input type="radio" name="exper" id="medio">
+            <label for="medio">Medio</label>
+
+            <input type="radio" name="exper" id="senior">
+            <label for="senior">Sênior</label>
+           </div> 
+           
+           <p>Linguagem dominada</p>
+          <div>
+               <input type="checkbox" name="lingua" id="PHP">
+               <label for="PHP">PHP</label>
+          </div>
+          <div>
+               <input type="checkbox" name="lingua" id="js">
+               <label for="js">Javascript</label>
+          </div>
+          <div>
+              <input type="checkbox" name="lingua" id="phynton">
+              <label for="phynton">Phyton</label>
+          </div>
+          <div>
+
+            <input type="checkbox" name="lingua" id="cmais">
+            <label for="cmais">C++</label>    
+          </div>
+           <br>
+          <div>
+              <label for="">Turno de trabalho</label>
+              <select name="turno" id="turno">
+                  <option value="manha">matutino</option>
+                  <option selected value="tarde">vespertino</option>
+                  <option value="noite">noturno</option>
+              </select>           
+          </div>
+          <br>
+          Fale sobre você
+          <div>
+              <textarea name="you" id="you" cols="30" rows="5"></textarea>
+          </div>
+           <br>
+          <input type="submit" value="Cadastrar"  class="submit">
+          
+        </form>
+        </fieldset>
+    </main>
+</body>
+</html>
